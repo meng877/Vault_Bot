@@ -1,0 +1,8 @@
+{
+    "id": "vault_bot",
+    "version": "1.0.0",
+    "name": "Vault Bot",
+    "description": "基于MCDR和carpet bot的自动刷宝库方法",
+    "authors": "meng877",
+    "link": "https://github.com/meng877/Vault_Bot"
+}
