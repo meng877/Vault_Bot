@@ -14,13 +14,13 @@
 由于carpet假人生成时会造成大量卡顿，建议在服务器人少时运行
 
 ## 命令
-!!vault start '<name>' #开始刷宝库任务<name>
+"!!vault start <name>" #开始刷宝库任务<name>
 
-!!vault stop '<name>' #停止刷宝库任务<name>
+"!!vault stop <name>" #停止刷宝库任务<name>
 
-!!vault stop all  #停止所有刷宝库任务
+"!!vault stop all"  #停止所有刷宝库任务
 
-!!vault task #列出所有任务
+"!!vault task" #列出所有任务
 
 有bug或者更好的实现方法，请发issue或者PR，谢谢
 
