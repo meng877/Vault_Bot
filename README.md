@@ -13,10 +13,12 @@
 ## 注意事项
 由于carpet假人生成时会造成大量卡顿，建议在服务器人少时运行
 
-## 命令
-"!!vault start <name>" #开始刷宝库任务<name>
+虽然支持同时创建多个任务，但由于卡顿巨大，并不建议这样做
 
-"!!vault stop <name>" #停止刷宝库任务<name>
+## 命令
+"!!vault start \<name\>" #开始刷宝库任务<name>
+
+"!!vault stop \<name\>" #停止刷宝库任务<name>
 
 "!!vault stop all"  #停止所有刷宝库任务
 
