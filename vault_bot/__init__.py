@@ -18,6 +18,7 @@ def vault_start(source: CommandSource, content: CommandContext):
     for i in range(1,129):
         if tasklist[name] == -1:
             break
+        tasklist[name] = i
         server.execute(f'execute at {config.bot_prefix}vault_{name} run player vault_{name}_{i} spawn')
         time.sleep(config.wait_time)
         server.execute(f'gamemode survival {config.bot_prefix}vault_{name}_{i}')
@@ -42,8 +43,9 @@ def vault_stop_all(source: CommandSource, content: CommandContext):
     source.reply("所有任务均已停止")
 
 def show_tasklist(source: CommandSource, content: CommandContext):
-    for name in tasklist():
-        message += f"任务{name}：生成次数：{tasklist[name]}"
+    message = ""
+    for name in tasklist:
+        message += f"任务{name}：生成次数：{tasklist[name]}\n"
     source.reply(message)
 
 def on_load(server: PluginServerInterface, prev_module):
@@ -59,4 +61,5 @@ def on_load(server: PluginServerInterface, prev_module):
     builder.register(server)
 
 def on_unload(server: PluginServerInterface):
-    vault_stop_all()
+    for name in list(tasklist.keys()):
+        tasklist[name] = -1
